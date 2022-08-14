@@ -1,0 +1,165 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+/* 	outline: 1px solid black; */
+}
+
+body {
+	background: url('https://img.freepik.com/free-photo/white-texture_1160-786.jpg?w=996&t=st=1660457589~exp=1660458189~hmac=189dc6f260f5445ac90eae8c71fc29eb12032e0af42ef32742b2c6fb5b14acdc');
+	display: flex;
+	background-size: cover;
+	width: 100vw;
+	min-height: 100vh;
+	font-family: Helvetica, sans-serif;
+	position: relative;
+	padding: 1.5rem;
+}
+
+main {
+	width: 100%;
+	position: relative;
+}
+
+.wrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.clock {
+	aspect-ratio: 1;
+	min-width: 30rem;
+	position: relative;
+	padding: 0.5rem;
+	background: #fff;
+	border: 1rem #fff solid;
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 0.15rem #444,	
+							inset 0 0 0 0.4rem #aaa,
+							inset 0 0 0 1rem #ccc,
+							inset 0 0 0 2.5rem #eee,
+							inset 0 0 5rem #0003,
+							inset 0 0 10rem #0002,
+							0 0 2rem #0004,
+							0 0 0 0.1rem #ccc;
+}
+
+.clock-time {
+	display: flex;
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	gap: 1.25rem;
+}
+
+.time {
+	aspect-ratio: 1;
+	width: 3rem;
+	padding: 0.25rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2rem;
+	font-weight: bold;
+	background: #ddd;
+	border-radius: 0.25rem;
+}
+
+.time:after{
+	position: absolute;
+	font-size: 0.9rem;
+	bottom: -40%;
+	font-weight: 400;
+}
+
+.time:nth-child(1){
+	color: black;
+}
+
+.time:nth-child(1):after{
+	content: "Hour";
+}
+
+.time:nth-child(2){
+	color: #227;
+}
+
+.time:nth-child(2):after{
+	content: "Minutes";
+}
+
+.time:nth-child(3){
+	color: red;
+}
+
+.time:nth-child(3):after{
+	content: "Seconds";
+}
+
+.clock-face {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.hand {
+	position: absolute;
+	top: 50%;
+	display: flex;
+	justify-content: flex-end;
+	transform-origin: 100%;
+	transform: rotate(90deg);
+}
+
+.hand:nth-child(1) {
+	height: 0.25rem;
+	width: 35%;
+	margin-left: 15%;
+	background: black;
+}
+
+.hand:nth-child(1):after {
+	content: "";
+	height: 0.25rem;
+	width: 100%;
+	background: black;
+	position: absolute;
+	transform: translate(20%, 0);
+}
+
+.hand:nth-child(2) {
+	height: 0.25rem;
+	width: 45%;
+	margin-left: 5%;;
+	background: #227;
+}
+
+.hand:nth-child(2):after {
+	content: "";
+	height: 0.25rem;
+	width: 100%;
+	background: #227;
+	position: absolute;
+	transform: translate(20%, 0);
+}
+
+.hand:nth-child(3){
+	height: 0.25rem;
+	width: 50%;
+	background: red;
+	transition: all 0.2s;
+	transition-timing-function: cubic-bezier(0.88, 2.42, 0, 0.96);
+}
+
+.hand:nth-child(3):after{
+	content: "";
+	aspect-ratio: 1;
+	position: absolute;
+	width: 0.75rem;
+	background: red;
+	transform: translate(50%, -35%);
+	border-radius: 50%;
+}
