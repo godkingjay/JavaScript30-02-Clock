@@ -25,7 +25,7 @@ Build a Clock:
 
 ### Links
 
-- Live Site: ---> [LINK]()
+- Live Site: ---> [LINK](https://godkingjay.github.io/JavaScript30-02-Clock/)
 
 ## My process
 
