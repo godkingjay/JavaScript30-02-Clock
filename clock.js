@@ -13,8 +13,6 @@ function setDate(){
 	const secondsDegrees = ((seconds/60) * 360) + 90;
 	secondTime.textContent = ((seconds < 10)?"0":"") + seconds;
 
-	console.log(seconds);
-
 	if (seconds === 0) {
 		secondHand.style.transition = `none`;
 	} else {
